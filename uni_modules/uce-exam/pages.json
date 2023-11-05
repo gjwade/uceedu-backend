@@ -1,0 +1,7 @@
+{
+	"root": "uni_modules/uce-exam/pages",
+	"pages": [
+		{ "path": "q_category/list" },
+		{ "path": "q_bank/list" }
+	]
+}

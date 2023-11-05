@@ -1,0 +1,52 @@
+{
+  "bsonType": "object",
+  "required": [],
+  "permission": {
+    "read": false,
+    "create": "auth.uid != null",
+    "update": "doc.uid == auth.uid",
+    "delete": "doc.uid == auth.uid"
+  },
+  "properties": {
+    "_id": {
+      "description": "ID，系统自动生成"
+    },
+    "obj_id": {
+      "bsonType": "string",
+      "description": "评论对象",
+      "title": "评论对象"
+    },
+    "user_id": {
+      "bsonType": "string",
+      "description": "评论者ID",
+      "forceDefaultValue": {
+        "$env": "uid"
+      },
+      "foreignKey": "uni-id-users._id"
+    },
+    "comment_content": {
+      "bsonType": "string",
+      "description": "评论内容",
+      "title": "评论内容",
+      "trim": "right"
+    },
+    "comment_type": {
+      "bsonType": "int",
+      "description": "回复类型： 0 课程评论  1 视频评论"
+    },
+    "comment_date": {
+      "bsonType": "timestamp",
+      "description": "评论发表时间",
+      "forceDefaultValue": {
+        "$env": "now"
+      }
+    },
+    "comment_ip": {
+      "bsonType": "string",
+      "description": "评论发表时 IP 地址",
+      "forceDefaultValue": {
+        "$env": "clientIP"
+      }
+    }
+  }
+}

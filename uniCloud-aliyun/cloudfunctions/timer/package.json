@@ -1,0 +1,12 @@
+{
+	"name": "timer",
+	"main": "index.js",
+	"version": "1.0.0",
+	"description": "定时器脚本，每1分钟触发一次",
+	"cloudfunction-config": {
+		"concurrency": 1,
+		"memorySize": 256,
+		"path": "",
+		"timeout": 600
+	}
+}

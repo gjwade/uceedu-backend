@@ -1,0 +1,27 @@
+{
+	"name": "uce-vk-pay",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"private": true,
+	"cloudfunction-config": {
+		"concurrency": 1,
+		"memorySize": 256,
+		"path": "/http/vk-pay",
+		"timeout": 60,
+		"triggers": [],
+		"runtime": "Nodejs12"
+	},
+	"dependencies": {
+		"uni-config-center": "file:../../../uni_modules/uni-config-center/uniCloud/cloudfunctions/common/uni-config-center",
+		"uni-id": "file:../../../uni_modules/uni-id/uniCloud/cloudfunctions/common/uni-id",
+		"uni-pay": "file:../../../uni_modules/uni-pay/uniCloud/cloudfunctions/common/uni-pay",
+		"vk-uni-pay": "file:../common/vk-uni-pay"
+	}
+}

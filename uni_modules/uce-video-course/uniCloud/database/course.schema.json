@@ -1,0 +1,109 @@
+{
+  "bsonType": "object",
+  "required": [],
+  "permission": {
+    "read": true,
+    "create": false,
+    "update": false,
+    "delete": false
+  },
+  "properties": {
+    "_id": {
+      "description": "ID，系统自动生成"
+    },
+    "user_id": {
+      "bsonType": "string",
+      "description": "创建人ID",
+      "title": "创建人",
+      "foreignKey": "uni-id-users._id",
+      "defaultValue": {
+        "$env": "uid"
+      }
+    },
+    "title": {
+      "bsonType": "string",
+      "description": "课程名",
+      "title": "课程名"
+    },
+    "thumb": {
+      "bsonType": "string",
+      "description": "图片地址",
+      "title": "封面图"
+    },
+    "charge": {
+      "bsonType": "int",
+      "description": "价格，0为免费",
+      "title": "价格",
+      "defaultValue": 0
+    },
+	"charge_original": {
+	  "bsonType": "int",
+	  "description": "划线价，空则不显示",
+	  "title": "划线价",
+	  "defaultValue": 0
+	},
+    "short_description": {
+      "bsonType": "string",
+      "description": "简短描述",
+      "title": "简短描述"
+    },
+    "render_desc": {
+      "bsonType": "string",
+      "description": "课程描述",
+      "title": "课程描述"
+    },
+    "published_at": {
+      "bsonType": "timestamp",
+      "description": "上线时间之后课程可见",
+      "title": "上线时间"
+    },
+    "is_show": {
+      "bsonType": "int",
+      "description": "显示：0 隐藏 1 显示",
+      "title": "课程状态",
+      "defaultValue": true
+    },
+    "is_rec": {
+      "bsonType": "int",
+      "description": "推荐：0 否 1 是",
+      "title": "是否推荐",
+      "defaultValue": false
+    },
+    "comment_status": {
+      "bsonType": "int",
+      "description": "0关闭评论,1所有人,2仅购买",
+      "title": "评论",
+      "defaultValue": 1,
+      "enum": [
+        {
+          "text": "关闭评论",
+          "value": 0
+        },
+        {
+          "text": "所有人",
+          "value": 1
+        },
+        {
+          "text": "仅购买",
+          "value": 2
+        }
+      ]
+    },
+    "user_count": {
+      "bsonType": "int",
+      "description": "学习人数",
+      "title": "学习人数",
+      "defaultValue": 0
+    },
+    "category_id": {
+      "bsonType": "string",
+      "title": "分类",
+      "description": "分类 id",
+      "foreignKey": "course_category._id",
+      "enum": {
+        "collection": "course_category",
+        "field": "name as text, _id as value"
+      }
+    }
+  }
+}

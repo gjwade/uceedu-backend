@@ -1,0 +1,114 @@
+{
+	"id": "UCE-ADMIN",
+	"name": "UceEdu-ADMIN",
+	"version": "1.5.7",
+	"displayName": "【UceEdu】基于uniCloud云端一体的知识付费、在线培训解决方案-后台管理+服务端",
+	"description": "多端支持；计划支持视频点播、电子书、图文收费、考试系统、问答、学习路径、视频试看等功能，目前支持接入官方支付宝、微信支付，支持接入个人支付。",
+	"keywords": [
+		"知识付费",
+		"职业教育",
+		"在线学习",
+		"在线点播",
+		"企业培训"
+	],
+	"main": "main.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": "",
+	"author": "Debug",
+	"license": "",
+	"homepage": "",
+	"dependencies": {
+		"element-ui": "^2.15.5",
+		"umy-ui": "^1.1.6",
+		"vk-unicloud-admin-ui": "^1.8.24"
+	},
+	"engines": {
+		"HBuilderX": "^3.1.10"
+	},
+	"dcloudext": {
+		"category": [
+			"uniCloud",
+			"云端一体项目模板"
+		],
+		"sale": {
+			"regular": {
+				"price": "999.00"
+			},
+			"sourcecode": {
+				"price": "0.00"
+			}
+		},
+		"contact": {
+			"qq": "374558411"
+		},
+		"declaration": {
+			"ads": "无",
+			"data": "插件不采集任何数据",
+			"permissions": "无"
+		},
+		"npmurl": ""
+	},
+	"uni_modules": {
+		"encrypt": [
+			"uniCloud-aliyun/cloudfunctions/router/index.js",
+			"uniCloud-aliyun/cloudfunctions/router/application/service/aliyunVod.js",
+			"uniCloud-aliyun/cloudfunctions/router/application/service/businessState.js",
+			"uniCloud-aliyun/cloudfunctions/router/application/service/orderPaySuccess.js",
+			"uniCloud-aliyun/cloudfunctions/router/application/service/orderState.js",
+			"uniCloud-aliyun/cloudfunctions/router/application/service/YunGouPay.js",
+			"uniCloud-aliyun/cloudfunctions/router/util/pubFunction.js",
+			"uniCloud-aliyun/cloudfunctions/router/service/client/app/pub/init.js",
+			"uniCloud-aliyun/cloudfunctions/router/service/client/payment/kh/create.js",
+			"uniCloud-aliyun/cloudfunctions/router/service/client/payment/kh/query.js",
+			"uniCloud-aliyun/cloudfunctions/router/service/client/q_bank/kh/save_answer.js",
+			"uniCloud-aliyun/cloudfunctions/common/vk-uni-pay/index.js",
+			"uniCloud-aliyun/cloudfunctions/common/vk-uni-pay/libs/alipay.js",
+			"uniCloud-aliyun/cloudfunctions/common/vk-uni-pay/libs/wxpay.js"
+		],
+		"platforms": {
+			"cloud": {
+				"tcb": "y",
+				"aliyun": "y"
+			},
+			"client": {
+				"App": {
+					"app-vue": "n",
+					"app-nvue": "n"
+				},
+				"H5-mobile": {
+					"Safari": "n",
+					"Android Browser": "n",
+					"微信浏览器(Android)": "n",
+					"QQ浏览器(Android)": "n"
+				},
+				"H5-pc": {
+					"Chrome": "y",
+					"IE": "u",
+					"Edge": "y",
+					"Firefox": "y",
+					"Safari": "y"
+				},
+				"小程序": {
+					"微信": "n",
+					"阿里": "n",
+					"百度": "n",
+					"字节跳动": "n",
+					"QQ": "n"
+				},
+				"快应用": {
+					"华为": "n",
+					"联盟": "n"
+				},
+				"Vue": {
+					"vue2": "y",
+					"vue3": "u"
+				}
+			}
+		},
+		"extends": {
+			"sn": "9YYW7BC9e2zaU9654s9NX7/C4nhWO2cHOUWyJjU9TPJEgZphXMIp59NSssJGGteF63qY8T/Blayhh9JgTXuWibnCf3dTxArJiksVcwZCNnz6YuvY2Sfz2eT4huEUmIHTEtadTKw01sFDICt7c3z587gI61jMuMfSwWaeScZzssHoaVxmUjgNqMeDGQR3oWz70R40SSxdDB3zLTxHC5WNg3x/+nELx6ynwkq2JSEbS5kNFLqT74vKKnDt+H49rr8Vbe0poKtJ/4MHearc666gV95XhnLaeK07Ne1ccJlyTmhQDq/vIbl96SS/nF+tUcLMOwVs852gasEfiQqGGlKX9A=="
+		}
+	}
+}

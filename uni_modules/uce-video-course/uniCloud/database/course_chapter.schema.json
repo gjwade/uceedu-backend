@@ -1,0 +1,35 @@
+{
+  "bsonType": "object",
+  "required": [],
+  "permission": {
+    "read": true,
+    "create": false,
+    "update": false,
+    "delete": false
+  },
+  "properties": {
+    "_id": {
+      "description": "ID，系统自动生成"
+    },
+    "course_id": {
+      "bsonType": "string",
+      "description": "课程",
+      "title": "课程",
+      "foreignKey": "courses._id",
+      "enum": {
+        "collection": "courses",
+        "field": "title as text, _id as value"
+      }
+    },
+    "title": {
+      "bsonType": "string",
+      "description": "章节名",
+      "title": "章节名"
+    },
+    "sort": {
+      "bsonType": "int",
+      "description": "排序(越小越靠前)",
+      "title": "排序"
+    }
+  }
+}

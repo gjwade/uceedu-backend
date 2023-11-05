@@ -1,0 +1,42 @@
+{
+  "bsonType": "object",
+  "required": [],
+  "permission": {
+    "read": true,
+    "create": false,
+    "update": false,
+    "delete": false
+  },
+  "properties": {
+    "_id": {
+      "description": "ID，系统自动生成"
+    },
+    "name": {
+      "bsonType": "string",
+      "description": "分类名",
+      "title": "分类名"
+    },
+    "parent_id": {
+      "bsonType": "string",
+      "description": "父id",
+      "title": "父id",
+      "parentKey": "_id"
+    },
+    "parent_chain": {
+      "bsonType": "string",
+      "description": "父链",
+      "title": "父链"
+    },
+    "is_show": {
+      "bsonType": "bool",
+      "description": "是否显示",
+      "title": "是否显示",
+      "defaultValue": true
+    },
+    "sort": {
+      "bsonType": "int",
+      "description": "排序(越小越靠前)",
+      "title": "排序"
+    }
+  }
+}

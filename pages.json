@@ -1,0 +1,119 @@
+{
+	"easycom": {
+
+	},
+	"pages": [
+		{ "path": "pages/index/index" },
+		{
+			"path": "pages/login/index",
+			"style": {
+				"topWindow": false,
+				"leftWindow": false,
+				"navigationBarTitleText": "登录"
+			}
+		}
+	],
+	"subPackages": [{
+			"root": "pages_plugs",
+			"pages": [
+				{ "path": "error/404", "style": { "navigationBarTitleText": "页面不存在" } },
+				{ "path": "error/403", "style": { "navigationBarTitleText": "无权访问" } },
+				{ "path": "error/500", "style": { "navigationBarTitleText": "服务器出错了" } },
+				{ "path": "system/user/list" },
+				{ "path": "system/role/list" },
+				{ "path": "system/permission/list" },
+				{ "path": "system/menu/list" },
+				{ "path": "system_uni/opendb-global-data" },
+				{ "path": "system_uni/uni-id-log" },
+				{ "path": "system_uni/opendb-admin-log" },
+				{ "path": "system_uni/opendb-components-dynamic" },
+				{ "path": "system/app/list" },
+				{ "path": "system_uni/uni-id-files/list" }
+			]
+		},
+		{
+			"root": "uni_modules/uce-video-course/pages",
+			"pages": [
+				{ "path": "category/list" },
+				{ "path": "course/list" }
+			]
+		},
+		{
+			"root": "uni_modules/uce-operations/pages",
+			"pages": [
+				{ "path": "slider/list" },
+				{ "path": "home_nav/list" },
+				{ "path": "urls/list" }
+			]
+		},
+		{
+			"root": "uni_modules/uce-order/pages",
+			"pages": [
+				{ "path": "order/list" }
+			]
+		},
+		{
+			"root": "uni_modules/uce-article/pages",
+			"pages": [
+				{ "path": "category/list" },
+				{ "path": "article/list" }
+			]
+		},
+		{
+			"root": "uni_modules/uce-pay-article/pages",
+			"pages": [
+				{ "path": "category/list" },
+				{ "path": "article/list" }
+			]
+		},
+		{
+			"root": "uni_modules/uce-upgrade-center/pages",
+			"pages": [
+				{ "path": "list" }
+			]
+		},
+		{
+			"root": "uni_modules/uce-bbs/pages",
+			"pages": [
+				{ "path": "category/list" },
+				{ "path": "article/list" }
+			]
+		},
+		{
+			"root": "uni_modules/uce-exam/pages",
+			"pages": [
+				{ "path": "q_bank_category/list" },
+				{ "path": "q_bank/list" }
+			]
+		},
+		{
+			"root": "uni_modules/uce-free-live-course/pages",
+			"pages": [
+				{ "path": "category/list" },
+				{ "path": "course/list" }
+			]
+		}
+	],
+	"globalStyle": {
+		"navigationStyle": "custom",
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "【UceEdu】基于云端一体化的在线教育解决方案",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"topWindow": {
+		"path": "windows/topWindow",
+		"style": {
+			"height": "100px"
+		},
+		"matchMedia": {
+			"minWidth": 0
+		}
+	},
+	"leftWindow": {
+		"path": "windows/leftWindow",
+		"style": {
+			"width": "240px"
+		}
+	}
+}

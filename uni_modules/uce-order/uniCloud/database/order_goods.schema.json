@@ -1,0 +1,79 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+	"bsonType": "object",
+	"required": [],
+	"permission": {
+		"read": true,
+		"create": false,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"oid": {
+			"bsonType": "string",
+			"description": "订单ID",
+			"title": "订单",
+			"foreignKey": "uni-id-base-order._id"
+		},
+		"user_id": {
+			"bsonType": "string",
+			"description": "下单人ID",
+			"title": "下单人",
+			"foreignKey": "uni-id-users._id",
+			"defaultValue": {
+				"$env": "uid"
+			}
+		},
+		"goods_id": {
+			"bsonType": "string",
+			"description": "商品ID",
+			"title": "商品"
+		},
+		"goods_type": {
+			"bsonType": "string",
+			"description": "商品类型",
+			"title": "商品类型"
+		},
+		"num": {
+			"bsonType": "int",
+			"description": "数量",
+			"title": "数量"
+		},
+		"charge": {
+			"bsonType": "int",
+			"description": "价格",
+			"title": "价格"
+		},
+		"goods_name": {
+			"bsonType": "string",
+			"description": "商品名",
+			"title": "商品名"
+		},
+		"goods_thumb": {
+			"bsonType": "string",
+			"description": "商品封面",
+			"title": "商品封面"
+		},
+		"goods_charge": {
+			"bsonType": "int",
+			"description": "商品标价",
+			"title": "商品标价"
+		},
+		"goods_ori_charge": {
+			"bsonType": "int",
+			"description": "商品原价",
+			"title": "商品原价"
+		},
+		"create_date": {
+			"bsonType": "timestamp",
+			"description": "创建时间",
+			"title": "创建时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			}
+		}
+	}
+}

@@ -1,0 +1,8 @@
+{
+	"root": "uni_modules/uce-operations/pages",
+	"pages": [
+		{ "path": "slider/list" },
+		{ "path": "home_nav/list" },
+		{ "path": "urls/list" }
+	]
+}

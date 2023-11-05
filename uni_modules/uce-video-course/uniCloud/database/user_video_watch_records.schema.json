@@ -1,0 +1,68 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+	"bsonType": "object",
+	"required": [],
+	"permission": {
+		"read": true,
+		"create": false,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"user_id": {
+			"bsonType": "string",
+			"description": "创建人ID",
+			"title": "创建人",
+			"foreignKey": "uni-id-users._id",
+			"defaultValue": {
+				"$env": "uid"
+			}
+		},
+		"course_id": {
+			"bsonType": "string",
+			"title": "所属课程",
+			"description": "课程 id",
+			"foreignKey": "courses._id",
+			"enum": {
+				"collection": "courses",
+				"field": "title as text, _id as value"
+			}
+		},
+		"video_id": {
+			"bsonType": "string",
+			"title": "所属视频",
+			"description": "视频 id",
+			"foreignKey": "course_videos._id",
+			"enum": {
+				"collection": "course_videos",
+				"field": "title as text, _id as value"
+			}
+		},
+		"watch_seconds": {
+			"bsonType": "int",
+			"title": "已看时长",
+			"description": "已看时长"
+		},
+		"watched_at": {
+			"bsonType": "timestamp",
+			"description": "看完时间",
+			"title": "看完时间"
+		},
+		"create_date": {
+			"bsonType": "timestamp",
+			"description": "创建时间",
+			"title": "创建时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			}
+		},
+		"update_date": {
+			"bsonType": "timestamp",
+			"description": "更新时间",
+			"title": "更新时间"
+		}
+	}
+}
